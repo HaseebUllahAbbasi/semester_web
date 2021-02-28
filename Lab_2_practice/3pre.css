@@ -1,0 +1,25 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: tomato;
+    color: rgba(0,0,0,.8);
+    padding: 20px;
+}
+#inline, #block {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 2px solid rgba(255,255,255,0.2);
+}
+#inline > * {
+    background-color: white; 
+    margin: 10px 0px 10px 10px;
+    padding: 5px;
+}
+#block > * {
+    box-sizing: border-box;
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+}

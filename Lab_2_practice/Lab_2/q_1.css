@@ -1,0 +1,74 @@
+header
+{
+    margin: 5px;
+    background-color: silver;
+    height: 8em;
+    text-align: center;
+}
+nav
+{
+    margin: 5px;
+    background-color:palevioletred;
+    height: 5em;
+    text-align: center;
+}
+.container
+{
+    width: 100%;
+}
+.container *
+{
+    overflow: auto;
+    /**
+display: inline-block;
+if each elemts has the propert then its ok ,
+otherwise give this property to each child element
+    **/
+}
+
+aside
+{
+    display: inline-block;
+
+    width: 25%;
+    margin: 5px ;
+    background-color:teal;
+    height: 400px;    
+
+}
+
+main
+{
+    /**
+    overflow: auto;
+    to control the overlfow , otherwise it goen down
+    **/
+    display: inline-block;
+
+    width: 73.4%;
+    margin: 5px;
+
+    background-color:green;
+    height: 400px;    
+}
+footer
+{
+    margin: 5px;
+    height: 6em;
+    background-color: hotpink;
+}
+article
+{
+    margin: 5px 10px;
+    height: 9em;
+    background-color: lightblue;
+    
+    
+} 
+h1
+{
+    text-align: center;
+}
+
+
+

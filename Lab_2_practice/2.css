@@ -1,0 +1,16 @@
+.box {
+    border: 2px dashed;
+    background-color: white;
+}
+
+#classes {
+    
+    color: slateblue;
+}
+#ids {
+    color: tomato;
+}
+
+#classes > P > b, #ids >ul >li > b{
+    color: green;
+} 

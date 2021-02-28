@@ -1,0 +1,32 @@
+/* PADDING */
+.box {
+    background-color: lightgray;
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    /* box-sizing: border-box; */
+}
+.content {
+    background-color: white;
+    /* padding: 10px; */
+    /* box-sizing: border-box; */
+}
+
+/* MARGIN */
+.parent {
+    background-color: rgba(0,0,0,.3);
+}
+.box {
+    background-color: lightgray;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin: 10px 5px 10px 5px;
+    /* border: solid 10px lightgreen; */
+}
+
+.content {
+    background-color: white;
+    padding: 10px;
+    box-sizing: border-box;
+}

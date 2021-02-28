@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+form
+{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+.user_1
+{
+    margin: 5px;
+    padding: 2em 40em;
+}
+input[type=text],  input[type=password]  
+{
+    border-radius: 2em;
+    height: 50px;
+    width: 300px;
+}
+label
+{
+    margin: 1em;
+    font-size: 30px;
+
+}
+input[type=button]
+{
+    border-radius: 2em;
+    height: 50px;
+    width: 15%;
+}
+button 
+{
+    border-radius: 2em;
+    height: 50px;
+    width: 12%;
+}

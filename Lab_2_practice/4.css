@@ -1,0 +1,42 @@
+.bar{
+    font-size: 100px;
+    width: 5rem;
+}
+
+.progress{
+    font-size: 50px;
+    width: 2rem;
+}
+
+
+/* .bar {
+    font-size: 100px;
+    width: 4em;
+}
+.progress {
+    font-size: 200px;
+    width: 1em;
+} */
+
+/* .bar {
+    font-size: 8px;
+    width: 20em;
+}
+.progress {
+    font-size: 16px;
+    width: 10em;
+} */
+
+/* .bar {
+    width: 20rem;
+}
+.progress {
+    width: 10rem;
+} */
+
+/* .bar {
+    width: 50%;
+}
+.progress {
+    width: 50%;
+} */

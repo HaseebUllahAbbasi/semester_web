@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+}
+header {
+    background-color: tomato;
+    padding: 5px 20px;
+    color: whitesmoke;
+}
+main {
+    padding: 20px 20px;
+    background-color: #eaeaea;
+}
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+section h3 {
+    margin: 10px 0;
+}

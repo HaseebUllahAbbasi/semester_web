@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+.box {
+    margin: 20px;/*
+    font-family: Tangerine, arial, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic; */
+    font: italic bold 30px Tangerine, arial, sans-serif;
+}
+
+.hidden {
+    /* display: none; 
+    visibility: hidden;  */
+    opacity: 1;
+}
