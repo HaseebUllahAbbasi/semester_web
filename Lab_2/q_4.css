@@ -46,7 +46,7 @@ p
     height: 2.5em;
     margin: 1em;
     font-weight: bolder;
-    
+    border-right: 1em solid green;
   /**  background-color: lightskyblue;
     **/
 }
@@ -58,7 +58,13 @@ p
     height: 2.5em;
     margin: 1em;
     font-weight: bolder;
+    border-right: 1em solid green;
   /**  background-color: lightskyblue;
     **/
+}
+.gall *
+{
+    display: inline;
+    
 }
 

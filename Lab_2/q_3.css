@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
+*
+{
+    font-family: 'Akaya Telivigala', cursive;
+    background-color: lightgrey;
+}
+header{
+    text-align: center;
+}
+main  aside, main section
+{
+    overflow: auto;
+    display: inline-block;
+}
+aside
+{
+    height: 20em;
+    width: 20%;
+    
+}
+section
+{
+    width: 70%;
+    height: 20em;
+}
+article
+{
+    margin: 2em;
+}
+p
+{
+    margin:2em ;
+}
+.btn-group
+{
+    margin: 2em;
+   /* background-color: lightsalmon;
+    */
+}
+.button
+{
+    
+    background-color: honeydew;
+    color: orange;
+    height: 2.5em;
+    margin: 1em;
+    font-weight: bolder;
+    border-right: 1em solid green;
+  /**  background-color: lightskyblue;
+    **/
+}
+.button_1
+{
+    
+    background-color: honeydew;;
+    color: brown;
+    height: 2.5em;
+    margin: 1em;
+    font-weight: bolder;
+    border-right: 1em solid green;
+  /**  background-color: lightskyblue;
+    **/
+}
+

@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input
+        {
+            border-radius: 6px;
+            height: 20px;
+        }
+        h2{
+            opacity: 0.5;
+            margin-left: 10px;
+        }
+        .container{
+            width: 50%;
+            margin: auto;
+            background-color: lightcoral;
+            border-radius: 5px;
+            height: 1300px;
+        }
+        h1{text-align: center; }
+        
+        .background{
+            
+            display: inline-block;
+            margin: 5px 50px;
+            border-radius: 3px;
+            padding: 20px;
+            width: 500px;
+            
+            
+            border: 2px solid white;
+            border-radius: 10px;
+            background-color: wheat;
+            
+        }
+        
+        label{
+            margin-right: 200px;
+            font-size: 20px;
+            color: black;
+            
+        }
+     button{
+            display: block;
+            margin-top: 20px;
+            margin-left: 250px;
+            padding: 15px 50px;
+            border-radius: 20px;
+            background-color: rgb(179, 48, 0);
+            color: white;
+            font-weight: bold;
+            font-size: large;
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Payment form</h1>
+    <div class="container">
+        <form>
+            <h2>Step 1: Your Details</h2>
+
+            <div class="background">
+                <label for="name"><b>Name</b></label>
+                <input type="text" name="name" id="name" placeholder="firstName">
+            </div>
+            <div class="background">
+                <label for="email"><b>Email</b></label>
+                <input type="email" name="email" id="email" placeholder="email@email.com">
+            </div>
+            <div class="background">
+                <label for="phone"><b>Phone</b></label>
+                <input type="phone" name="phone" id="phone" placeholder="0310-3333333">
+            </div>
+            <h2>Step 2: Delivery Address</h2>
+
+            <div class="background">
+
+                <label for="address"><b>Address</b></label><br><br>
+                <textarea name="address" id="address" cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="background" style="">
+
+                <label for="postcode"><b>Post Code</b> </label><br><br>
+                <input type="number" name="postcode" id="postcode">
+            </div>
+            <div class="background">
+
+                <label for="country"><b>Country</b></label>
+                <input type="text" name="country" id="country">
+            </div>
+
+            <h2>Step 3: Card Details</h2>
+
+            <div class="background">
+
+                <label for="cardtype">cardtype</label><br><br>
+                <input type="radio" name="cardtype">VISA
+                <input type="radio" name="cardtype">Debit
+                <input type="radio" name="cardtype">Mastercard
+            </div>
+
+            <div class="background">
+
+                <label for="cardnumber"><b>Card Number</b></label>
+                <input type="number" name="cardnumber" id="cardnumber">
+            </div>
+            <div class="background">
+
+                <label for="securitycode"><b>Security Code</b></label>
+                <input type="number" name="securitycode" id="securitycode">
+            </div>
+            <div class="background">
+
+                <label for="nameoncard"><b>Name on Card</b></label>
+                <input type="text" name="nameoncard" id="nameoncard" placeholder="Exact the letters">
+            </div>  
+            <div style="margin: 2em;">
+                <button>BUY IT!</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
