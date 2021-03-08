@@ -11,16 +11,29 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <style>
+      .logo
+      {
+        text-align: center;
+      }
       input
       {
         width: 100%;
         margin: 1em;
-
       }
       .custom_1
       {
         margin-top: 4em;
         text-align: center;
+      }
+      input[type=checkbox]
+      {
+        width: auto;
+
+      }
+      .form-check
+      {
+        display: inline-block;
+        margin-left: 1.5em;
       }
 
     </style>
@@ -30,19 +43,30 @@
   <body>
     <div class="container-fluid">
         <div class="col-md-6">
-          <div class="logo">
-                
+          <div class="logo" >
+                <img src="https://awamiweb.com/wp-content/uploads/2018/02/IBA-Sukkur.jpg"  width="300px" alt="">
           </div>
           <div class="custom_1">
             <p>Please enter the detials below</p>
           </div>
           <form>
             <div class="mb-3">
-              <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="*FullName">
+              <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="*FullName">
               <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="*Email Address">
-              <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="*Company">
-              <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="*Phone Number">
+              <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="*Company">
+              <input type="tel" class="form-control" aria-describedby="emailHelp" placeholder="*Phone Number">
               <input type="button" class="btn btn-primary"  value="Create Account"  > 
+
+
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="CheckBox" id="flexCheckDefault">
+                <label for="flexCheckDefault">  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident qui nihil odio nemo hic, laudantium earum </label>
+                
+              </div>
+
+            </div>
+            <div class="text-center">
+              <p>Already Have the account ? <u> <b>Sign In? </u> </b>  </p>
             </div>          
 
 
