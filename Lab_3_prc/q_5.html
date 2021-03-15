@@ -1,45 +1,147 @@
+
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <style>
-      .logo
-      {
-        text-align: center;
-      }
-      input
-      {
-        width: 100%;
-        margin: 1em;
-      }
-      .custom_1
-      {
-        margin-top: 4em;
-        text-align: center;
-      }
-      input[type=checkbox]
-      {
-        width: auto;
-
-      }
-      .form-check
-      {
-        display: inline-block;
-        margin-left: 1.5em;
-      }
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
     </style>
+    <title>Dot_5</title>
+    <style>
+        .active {
+            background-color: lightblue;
+            color: white;
+        }
 
-    <title>Hello, Dot!</title>
-  </head>
-  <body>
-  </body>
+        .side-nav button {
+            width: 50%;
+        }
+
+        img {
+            border: 1px solid white;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-md-3 side-nav mt-4">
+                <h3>Some Favorites</h3>
+                <nav class="nav flex-column">
+                    <a class="nav-link active" aria-current="page" href="#">Celery Root</a>
+                    <a class="nav-link" href="#">Spaghetti squash</a>
+                    <a class="nav-link" href="#">Killer Mashrooms</a>
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-primary mt-1" type="submit">Search Recepies</button>
+                </nav>
+
+            </div>
+
+            <div class="col-md-9 main-content">
+                <div class="alert alert-danger" role="alert">
+                    <b> Wow </b> This is the simple type of text
+                </div>
+
+                <div class="content">
+                    <h1>Wild & wacky vegetables</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ipsa molestias est suscipit nemo
+                        repellat rem perspiciatis amet inventore totam magni dolore quam, nam ratione modi voluptatem?
+                        Voluptate inventore aut quod dolor. Recusandae?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ipsa molestias est suscipit
+                        nemo repellat rem perspiciatis amet inventore totam magni dolore quam, nam ratione modi
+                        voluptatem? Voluptate inventore aut quod dolor. Recusandae?
+                    </p>
+                    <h1>Some diseases</h1>
+                    <table class="table table table-striped">
+                        <thead>
+                            <tr>
+
+                                <th scope="col">Veggie</th>
+                                <th scope="col">Diseas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+
+                                <td>Beets</td>
+                                <td>Beeturia</td>
+
+                            </tr>
+                            <tr>
+
+                                <td>Carrots</td>
+                                <td>Carotanosis</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+
+                    <div class="row">
+                        <div class="main-cards col-md-3">
+                            <div class="card">
+                                <img src="https://source.unsplash.com/1600x900/?beets" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    <h3>Beets</h3> Some quick exampletle and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-cards col-md-3">
+                            <div class="card">
+                                <img src="https://source.unsplash.com/1600x900/?carrots" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    <h3>Carrots</h3> Some quick exampletle and make up the bulk of the card's content.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-cards col-md-3">
+                            <div class="card">
+                                <img src="https://source.unsplash.com/1600x900/?asparagus" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    <h3>Asparagus</h3> Some quick exampletle and make up the bulk of the card's content.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <h2>Realy Informative Info</h2>
+                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, fuga non beatae doloribus
+                        nostrum accusamus ducimus accusantium ullam assumenda nulla optio harum tenetur cum suscipit
+                        possimus voluptates veritatis quam expedita in. Adllam assumenda nulla optio harum tenetur cum suscipit
+                        possimus voluptates veritatis quam expedita in. Adipisci, fugit!</p>
+                        <p>
+
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, fuga non beatae doloribus
+                        nostrum accusamus ducimus accusantium ullam assumenda nulla optio harum tenetur cum suscipit
+                        possimus voluptates veritatis quam expedita in. Adipisci, fugit!</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+</body>
+
 </html>

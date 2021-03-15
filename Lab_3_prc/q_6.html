@@ -1,82 +1,109 @@
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <style>
-      .logo
-      {
-        text-align: center;
-      }
-      input
-      {
-        width: 100%;
-        margin: 1em;
-      }
-      .custom_1
-      {
-        margin-top: 4em;
-        text-align: center;
-      }
-      input[type=checkbox]
-      {
-        width: auto;
-
-      }
-      .form-check
-      {
-        display: inline-block;
-        margin-left: 1.5em;
-      }
-
+        .heading-p{
+            
+            text-align: center;
+        }
+        button{
+            width: 100%;
+        }
+        #check_1{
+            text-align: center;
+            margin-top: 20px;
+        }
+        
     </style>
-
-    <title>Hello, world!</title>
+    <title>Dot_7</title>
   </head>
   <body>
-    <div class="container-fluid">
-        <div class="col-md-6">
-          <div class="logo" >
-                <img src="https://awamiweb.com/wp-content/uploads/2018/02/IBA-Sukkur.jpg"  width="300px" alt="">
-          </div>
-          <div class="custom_1">
-            <p>Please enter the detials below</p>
-          </div>
-          <form>
-            <div class="mb-3">
-              <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="*FullName">
-              <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="*Email Address">
-              <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="*Company">
-              <input type="tel" class="form-control" aria-describedby="emailHelp" placeholder="*Phone Number">
-              <input type="button" class="btn btn-primary"  value="Create Account"  > 
+    
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="heading-p">
+                    <img src="https://www.iba-suk.edu.pk/Content/assets/img/new-logo.png"  alt="">
+                    <p>Please Enter the Details </p>
+                </div>
+                <form>
+                    <div class="mb-3">
+                      
+                      <input type="text" class="form-control my-4" placeholder="Full name" id="name" aria-describedby="emailHelp">
+                      
+                    </div>
+                    <div class="mb-3">
+                      <input type="email" placeholder="Email address" class="form-control my-4" id="email">
+                    </div>
+                    <div class="mb-3">
+                        <input type="tel" placeholder="phone number"  class="form-control my-4" id="phone">
+                      </div>
+                      <div class="mb-3">
+                        <input type="text" placeholder="company name" class="form-control my-4" id="comapany">
+                      </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">By creating an account, you agree to our <b><u>Terms of Use</u> </b> and our <b><u>Privacy policy.</u></b> </label>
+                      
+                      
+                    </div>
+                    <button type="submit" class="btn btn-primary">CREATE NEW ACCOUNT</button>
+                    <p id="check_1">Already have an account? <b><u>Sign in</u></b></p>
+                  </form>
 
+                  
+                  <!-- slider -->
 
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="CheckBox" id="flexCheckDefault">
-                <label for="flexCheckDefault">  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident qui nihil odio nemo hic, laudantium earum </label>
-                
-              </div>
+                  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id mollitia provident quisquam, ipsa laudantium exercitationem tempore </p>
+                        <div class="carousel-caption d-none d-md-block">
 
+                        </div>
+                      </div>
+                      <div class="carousel-item">  
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id mollitia provident quisquam, ipsa laudantium exercitationem tempore </p>
+                        <div class="carousel-caption d-none d-md-block">
+                          
+                          
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id mollitia provident quisquam, ipsa laudantium exercitationem tempore </p>
+                        <div class="carousel-caption d-none d-md-block">
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+
+                  <!-- slider -->
             </div>
-            <div class="text-center">
-              <p>Already Have the account ? <u> <b>Sign In? </u> </b>  </p>
-            </div>          
 
-
-          </form>  
-        </div>
-        <div class="col-md-6">
-          <div class="container">
-                
-          </div>
+            <div class="col-md-6">
+                <img src="https://source.unsplash.com/user/erondu/600x600" alt="">
+            </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
   </body>
 </html>
