@@ -24,9 +24,27 @@ let par = document.createElement("li");
 let par_2 = document.createElement("li");
 par_2.innerText = "fourth";
 par.innerText = "fourth";
-list = document.getElementsByTagName('ol');
-list[0].appendChild(par);
+
+let list_ol = document.getElementsByTagName('ol');
+list_ol[0].appendChild(par);
 
 
-list = document.getElementsByTagName('ul');
-list[0].appendChild(par_2);
+let  list_ul = document.getElementsByTagName('ul');
+
+list_ul[0].appendChild(par_2);
+
+let array_ul =  list_ul[0].children;
+let array_ol =  list_ol[0].children;
+
+function change_color(params) 
+{
+    for(let i=0; i<params.length; i++)
+    {
+        let li_elem = params[i];
+        li_elem.style.background = 'green';
+    }
+}
+
+change_color(array_ul);
+change_color(array_ol);
+

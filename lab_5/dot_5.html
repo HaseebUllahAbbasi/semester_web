@@ -1,28 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Document</title>
-    </head>
-    <body>
-        <div class="header">
-            </div>
-        <section id="container">
-                <ul>
-                    <li class="first">one</li>
-                    <li class="second">two</li>
-                    <li class="third">three</li>
-                </ul>
-            <ol>
-                <li class="first">one</li>
-                <li class="second">two</li>
-                <li class="third">three</li>
-            </ol>
-        </section>
-        <div class="footer">         </div>
-        <script src="dot_5.js">
+<html>
+<head><br>
+ <meta charset=utf-8 />
+ <title>Insert row in a table - w3resource</title>
+</head>
+<body>
+ <table id="sampleTable" border="1">
+ <tr>
+ <td>Row1 cell1</td>
+ <td>Row1 cell2</td>
+ </tr>
+ <tr>
+ <td>Row2 cell1</td>
+ <td>Row2 cell2</td>
+ </tr>
+ </table><br>
+ <input type="button" onclick="insert_Row()" value="Insert row">
+ <script>
+    // function insert_Row()
+     
+        let obj  = document.getElementById('sampleTable');
+        let table_1 =   obj.lastElementChild
+        var row = obj.insertRow(table_1.children.length);
+        var c1 = row.insertCell(0);
+        var c2 = row.insertCell(1);
+        c1.innerText = "Dot_1";
+        c2.innerText = "Dot_1";
+        
 
-        </script>
-    </body>
+    
+     
+ </script>
+</body>
 
 </html>
