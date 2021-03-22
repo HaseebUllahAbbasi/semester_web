@@ -10,27 +10,45 @@
 <body>
     <div class="container">
         <h1 class="text-center mb-3 my-3">To Do List</h1>
-        <input class="form-control mb-3 my-3" type="text" id="new_task">
+        <input class="form-control mb-3 my-3" onkeypress="on_click_called(event)" type="text" id="new_task">
         <div class="text-center">
-            <button class="btn btn-outline-primary" onclick="add_task()">Add Task</button>
-        
+            <button class="btn btn-outline-primary" onclick="add_task()"   id="add_button" >Add Task</button>
         </div>
         
         <hr>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>No </th>
-                    <th>Task </th>
-                    <th>Completed </th>
-                </tr>
-            </thead>
-            <tbody id="table_body">
 
+        <div class="container">
+            <h1 class="text-center">To Do</h1>
+            <table class="table my-3 mb-3">
+                <thead>
+                    <tr>
+                        <th>No </th>
+                        <th>Task </th>
+                        <th>Complete</th>
+                    </tr>
+                </thead>
+                <tbody id="table_body_to_do">
+                </tbody>
+            </table>
     
-            </tbody>
-        </table>
-        
+        </div>
+        <hr>
+
+        <div class="container">
+            <h1 class="text-center">Completed</h1>
+            <table class="table my-3 mb-3">
+                <thead>
+                    <tr>
+                        <th>No </th>
+                        <th>Task </th>
+                        <th>Completed</th>
+                    </tr>
+                </thead>
+                <tbody id="table_body_completed">
+                </tbody>
+            </table>
+    
+        </div> 
     </div>
     <script src="dot_8.js"></script>
     

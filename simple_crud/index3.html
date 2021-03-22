@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Simple Crud</title>
+    <style>
+        td button
+        {
+            margin: 0.5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-3 mb-3">
+        <h1 class="text-center">
+                Simple Crud
+        </h1>
+        <div class="">
+            <input class="form-control my-3 mb-3 data_input" type="text" id="id"  placeholder="Id">
+            <input class="form-control my-3 mb-3 data_input "  type="text" id="name" placeholder="Name">
+            <input class="form-control my-3 mb-3 data_input" type="text"  id="desc" placeholder="Description">
+            <div class="text-center mb-6 my-6"> <button class="btn btn-success" onclick="add_data()">Add Record</button> </div>
+        </div>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Options</th>
+              </tr>
+            </thead>
+            <tbody id="table_body">
+              
+            </tbody>
+          </table>
+    </div>
+    <script src="script_2.js"></script>
+</body>
+</html>

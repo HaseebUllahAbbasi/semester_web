@@ -13,3 +13,4 @@ check.pop();
 console.log(check)
 array_1 = fvt_food.slice(0,fvt_food.length);
 console.log(array_1);
+
