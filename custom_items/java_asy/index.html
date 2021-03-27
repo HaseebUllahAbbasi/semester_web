@@ -1,0 +1,46 @@
+<!--  JavaScript Callbacks
+1. A callback is a function passed as an argument to another function
+    allows a function to call another function
+    callback function can run after another function has finished
+
+2. Sequence Control
+
+3. JavaScript Callbacks
+Using a callback, you could call the calculator function (myCalculator) with a callback, and let the calculator function run the callback after the calculation is finished:
+
+
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    function myDisplayer(some) 
+    {
+        
+        debugger;
+        console.log(some);
+    }
+
+    function myCalculator(num1, num2, myCallback) 
+    {
+        debugger;
+
+        let sum = num1 + num2;
+        myCallback(sum);
+    }
+
+    myCalculator(5, 5, myDisplayer);
+
+</script>
+</body>
+</html>
