@@ -1,0 +1,32 @@
+<!-- 
+    AJAX is a developer's dream, because you can:
+
+    Read data from a web server - after the page has loaded
+    Update a web page without reloading the page
+    Send data to a web server - in the background
+
+
+-->
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="demo">
+  <h2>Let AJAX change this text</h2>
+  <button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+
+<script>
+    function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     document.getElementById("demo").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "1", true);
+  xhttp.send();
+}
+</script>
+</body>
+</html>

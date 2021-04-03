@@ -1,0 +1,69 @@
+<!--
+     jQuery is a lightweight, "write less, do more", JavaScript library.
+    JQuery 
+        HTML/DOM manipulation
+        CSS manipulation
+        HTML event methods
+        Effects and animations
+        AJAX
+        Utilities
+
+
+        Basic syntax is: $(selector).action()
+
+
+
+        Events 
+
+        click	    keypress	submit	load
+        dblclick	keydown	    change	resize
+        mouseenter	keyup	    focus	scroll
+        mouseleave	     	    blur	unload
+
+    -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+let  p_variable;
+$(document).ready(function()
+{
+    /*
+  $("p").click(function(){
+    $(this).hide();
+  });
+  */
+ /*
+  $("p").click(function(){
+    $(".check").hide();
+  });
+*/
+
+let p_variable ="check" ;
+$("p").click(function()
+{
+    p_variable = $(this);
+    console.log($(this));
+});
+
+
+});
+</script>
+</head>
+<body>
+<h1>This is h1</h1>
+<p>If you click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+<p class="check">Click me away!</p>
+<p>Click me too!</p>
+<p id="ok">Click me away!</p>
+<p class="check">Click me too!</p>
+<p class="check">Click me away!</p>
+<p class="check">Click me away!</p>
+<p class="check">Click me away!</p>
+
+</body>
+</html>
