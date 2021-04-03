@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="parent-list">
+        <li id="a">Item A</li>
+        <li id="b">Item B</li>
+        <li id="c">Item C</li>
+        <li id="d">Item D</li>
+        <li id="e">Item E</li>
+        <li id="f">Item F</li>
+    </ul>
+    <script type="text/javascript">
+        // locate your element and add the Click Event Listener
+        document.getElementById("parent-list").addEventListener("click",function(e) {
+            // e.target is our targetted element.
+                        // try doing console.log(e.target.nodeName), it will result LI
+            if(e.target && e.target.nodeName == "LI") {
+                console.log(e.target.id + " was clicked");
+            }
+        });
+    </script>
+    
+</body>
+</html>
+
