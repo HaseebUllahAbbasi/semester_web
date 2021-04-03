@@ -14,7 +14,8 @@ function displayData_local(params) {
     let task_st = localStorage.getItem('list_of_task').split(',')
 }
 
-function add_task() {
+function add_task() 
+{
     let task = document.getElementById('new_task').value;
     list_of_items.push(task)
     displayData()

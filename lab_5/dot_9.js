@@ -19,7 +19,7 @@ function click_me(params)
         {   
         
             params.style.padding = "0em";
-            params.style.fontSize = "2.5em";
+            params.style.fontSize = "2.5em";    
             array[params.id] = 'O';
             params.innerText = "O";
         }
