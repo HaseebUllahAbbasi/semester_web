@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <fieldset>
+        <legend>
+         Inserting Data   
+        </legend>
+        <input type="text" name="" id="input_key" placeholder="Enter Key ">
+        <input type="text" name="" id="input_value" placeholder="Enter Value ">
+        <button onclick="add_item()">Insert Data</button>     
+    </fieldset>
+
+    <fieldset>
+        <legend>Local Storage</legend>
+        <div id="display">
+
+        </div>
+    </fieldset>
+
+
+    <script>
+        function add_item() {
+        let key =document.getElementById('input_key').value;
+        let value = document.getElementById('input_value').value;
+            if(key && value)
+            {
+                console.log('in ')
+                localStorage.setItem(key,value);
+                document.getElementById('input_key').value = "";
+                document.getElementById('input_value').value = "";
+                display_data();       
+            }
+        }
+        function display_data() {
+            
+        let element_1 = document.getElementById('display');
+            for (let i = 0; i < localStorage.length; i++) {
+                let key = localStorage.key(i);
+                let value = localStorage.getItem(key);
+                element_1.innerHTML+=`${key}: ${value} <br/>`;
+                
+            }
+        }
+
+    </script>
+</body>
+
+</html> 
