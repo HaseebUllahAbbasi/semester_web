@@ -11,9 +11,7 @@ console.log(dot_3);
 let dot_4 = document.querySelectorAll('ol >  .third');
 console.log(dot_4);
 
-/*
-dot_1.innerText = "Ki Hal Thek oo na";
-*/
+
 let dot_footer = document.getElementsByClassName('footer');
 
 dot_footer[0].classList.add('main');
