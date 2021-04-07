@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item"><a href="#">User</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">User Profile</li>
+                </ol>
+              </nav>
+        </div>
+        <div class="row">
+            <div class="col-md-3 m-1">
+              <div class="card" style="width: 18rem;">
+                <div class="text-center my-3">
+                  <img  id="pic_src" src="https://randomuser.me/api/portraits/women/81.jpg" alt="" style="border-radius: 4em;">
+                  
+                </div>
+
+                <div class="card-body">
+                  <div class="text-center">
+                    <h5 id="name-card">Mrs Myrtle Vargas
+                    </h5>
+                    <p  id="occ-card" >Full stack</p>
+                    <p id="add-card" >Stevens Creek Blvd Queensland
+
+                    </p>
+                    <p id="country-card" >Australia
+
+                    </p>
+                    
+                    <div>
+                      <button class="btn btn-primary">
+                          Follow
+                      </button>
+                      <button class="btn btn-outline-primary">
+                        Message
+                    </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7 m-1">
+              <table class="table">
+                <tr>
+                  <th >Full Name</th>
+                  <td id="full_name">Mrs Myrtle Vargas
+                  </td>
+                 
+                </tr>
+                <tr>
+                  <th >Email</th>
+                  <td id="mail">myrtle.vargas@example.com
+                  </td>
+                 
+                </tr> <tr>
+                  <th>phone</th>
+                  <td id="phone">05-7538-9848
+                  </td>
+                 
+                </tr>
+                 <tr>
+                  <th>Mob</th>
+                  <td id="mobile" >(437)594-749</td>
+                 
+                </tr>
+                 <tr>
+                  <th>Addr</th>
+                  <td id="address" >Depaul Dr
+                  </td>
+                 
+                </tr>
+                 <tr>
+                  <th>county</th>
+                  <td id="country" >Australia</td>
+                 
+                </tr>
+
+              </table>
+            </div>
+            
+        </div>
+
+        <div class="lists">
+
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <button onclick="display_obj_1()" style="background-color: transparent; border:none">Mrs Myrtle Vargas
+            </button>
+            <button onclick="remove_1()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <button onclick="display_obj_2()" style="background-color: transparent; border:none">Ms Audrey Gomez
+            </button>
+            <button onclick="remove_2()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div> <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <button onclick="display_obj_3()" style="background-color: transparent; border:none">Mr Damien Richard
+            </button>
+            <button onclick="remove_3()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        </div>
+       
+
+    </div>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
