@@ -5,8 +5,10 @@ document.addEventListener('DOMContentLoaded', display_earlier_data);
 
 function display_earlier_data() {
     
-    completed_tasks = localStorage.getItem('list_of_completed');
-    list_of_items =  localStorage.getItem('list_item');
+    if(localStorage.getItem('list_of_completed') == null || localStorage.getItem('list_item') == null)
+    {
+        return false;
+    }
     list_of_items = list_of_items.split(',');
     completed_tasks = completed_tasks.split(',')
     load_data();
