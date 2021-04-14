@@ -106,6 +106,8 @@ function extractKey(array,arg)
     });
     return new_arr;
 }
+
+// task 14
 console.log( " This is filter letters " + filterLetters(['1','c','c','b','c'],'c'));
 function filterLetters(array,letter)
 {
@@ -119,3 +121,77 @@ function filterLetters(array,letter)
     return new_arr;
 }
 
+
+// task 15 
+
+console.log(filterKey(
+    [{name: "Elie", isInstructor:true, isHilarious:
+false},{name: "Tim", isInstructor:true, isHilarious: true},{name:
+"Matt", isInstructor:true}], "isHilarious")
+);
+
+function filterKey(array,arg) 
+{
+    let new_array = [];
+    array.forEach(element => {
+        if(element[arg]==true)
+        {
+            new_array.push(element);
+        }
+    });
+    return new_array;
+}
+
+// task 16
+
+console.log(addKeyAndValue([{name: 'Elie'},{name: 'Tim'},{name: 'Elie'}],
+"isInstructor", true)
+);
+
+function addKeyAndValue(array,arg,value)
+{
+    array.forEach(element => {
+        element[arg] = value;
+    });
+    return array;
+    
+}
+
+let obj = {};
+
+// task 18 
+function vowelCount(params) 
+{
+    for(let i=0; i<params.length; i++)
+    {
+        let  arg = params[i]
+        if(params[i]== 'a' || params[i]== 'e' || params[i]== 'o' ||params[i]== 'u' || params[i]== 'i' )
+            if(! obj.hasOwnProperty(arg))
+                obj[arg]= 1;
+            else
+                obj[arg]++;
+
+    }
+    console.log(obj);
+    
+}
+vowelCount('this is straing')
+
+//task 19 
+function removeVowels(params) 
+{
+    let new_array = []
+    for(let i=0; i<params.length; i++)
+    {
+        if(params[i]== 'a' || params[i]== 'e' || params[i]== 'o' ||params[i]== 'u' || params[i]== 'i' )
+            continue;
+        else if(params[i]== 'A' || params[i]== 'E' || params[i]== 'I' ||params[i]== 'O' || params[i]== 'U' )
+            continue;
+        else 
+            new_array.push(params[i]);
+        }
+    return new_array;
+} 
+
+
+console.log( removeVowels("THis is  Check to be done "));
