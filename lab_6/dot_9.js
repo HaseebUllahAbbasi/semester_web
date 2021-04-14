@@ -3,12 +3,14 @@ let list_of_items = []
 let completed_tasks = []
 document.addEventListener('DOMContentLoaded', display_earlier_data);
 
-function display_earlier_data() {
-    
-    if(localStorage.getItem('list_of_completed') == null || localStorage.getItem('list_item') == null)
+function display_earlier_data() 
+{    
+    if(localStorage.getItem('list_of_completed') == null ||  localStorage.getItem('list_item') == null)
     {
         return false;
     }
+    completed_tasks = localStorage.getItem('list_of_completed')
+    list_of_items = localStorage.getItem('list_item')
     list_of_items = list_of_items.split(',');
     completed_tasks = completed_tasks.split(',')
     load_data();
