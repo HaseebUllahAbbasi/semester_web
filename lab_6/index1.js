@@ -49,12 +49,39 @@ function HighOrderFunction(number,fun)
 HighOrderFunction(90,IsEven);
 
 
+
+// task 6 
+function find(array,func) 
+{
+    return array.find(func);   
+}
+
+find([8,11,4,27], function(val){return val >= 10}); // 11
+
+
 // task 7 
 function findIndex(array,func)
 {
   return  array.findIndex(func)
 }
 console.log(findIndex([8,11,4,27], function(val){return val >= 10}))
+// task 9 
+
+function specialMultiply(n1,n2)
+ {
+     if(arguments.length==1)
+     {
+         return function(number)
+         {
+             return n1*number;
+         }
+     }
+     else
+     {
+         return n2*n1;
+     }
+}
+specialMultiply(3,4); // 12
 
 
 // task 10 

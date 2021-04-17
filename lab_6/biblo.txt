@@ -1,0 +1,44 @@
+Php Files Used in Project: 
+
+added.php
+cart.php
+checkout.php
+connect_db.php
+discuss.php
+do_it.php
+forum.php
+goodbye.php
+home.php
+item_detail.php
+like_it.php
+login.php
+login_action.php
+login_tools.php
+post.php
+post_action.php
+post_discuss.php
+rate_item.php
+readme.txt
+register.php
+require.php
+shop.php
+submit_rate.php
+subscription.php
+view_sub_post.php
+
+
+Images Folder contains the images 
+
+images
+cow.png
+dog.png
+goat.png
+leopard.png
+rhino.png
+
+includes folder contains the footer ,header and style to be used in php project
+
+includes
+footer.html
+header.html
+style.css
