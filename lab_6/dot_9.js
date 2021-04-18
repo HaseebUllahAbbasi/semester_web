@@ -32,20 +32,24 @@ function add_task()
 }
 function displayData() {
     let row = ''
-    list_of_items.forEach((item, index) => {
+    if(list_of_items[0]!="")
+    {    
+        list_of_items.forEach((item, index) => {
 
-        row += `<tr id='id_${index}'>
-        <th>${index + 1}</th>
-        <td class="fw-bold">${item}</td>
-        <td>
-        <input class="form-check-input" type="checkbox" onkeypress='checkBox_enter(event,${index})' onclick='deleteItem2(${index}) ' >        
-        
-        </td>
+            row += `<tr id='id_${index}'>
+            <th>${index + 1}</th>
+                <td class="fw-bold">${item}</td>
+                <td>
+                <input class="form-check-input" type="checkbox" onkeypress='checkBox_enter(event,${index})' onclick='deleteItem2(${index}) ' >        
+                
+                </td>
 
-            </tr>`;
-    })
-    localStorage.setItem('list_item',list_of_items);
-    document.getElementById('table_body_to_do').innerHTML = row;
+                    </tr>`;
+            })
+            localStorage.setItem('list_item',list_of_items);
+            document.getElementById('table_body_to_do').innerHTML = row;
+    }
+
 }
 function checkBox_enter(event,index) 
 {
