@@ -12,4 +12,5 @@
 
 ### [To Do with Local Sotage](https://haseebullahabbasi.github.io/semester_web/lab_6/dot_9.html)
 
-### [JQuery Effects](https://haseebullahabbasi.github.io/semester_web/jquery_prc/index.html)
+### [JQuery Effects_1](https://haseebullahabbasi.github.io/semester_web/jquery_prc/index.html)
+### [JQuery Effects_1](https://haseebullahabbasi.github.io/semester_web/jquery_prc/effects/index.html)
