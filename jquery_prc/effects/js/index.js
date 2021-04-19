@@ -63,10 +63,5 @@ $(document).ready(function(){
       div.animate({width: '100px', opacity: '0.8'}, "slow");
     });
 
-
-  
-  
-    
-
 });
   
