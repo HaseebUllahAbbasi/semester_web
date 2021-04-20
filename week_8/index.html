@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <style>
+        .input-group *
+        {
+            margin: 0em 1em;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container my-3">
+                <p class="display-3 text-center">Dot Movies  List</p>
+                <div class="input-group">
+                    <input class="form-control" placeholder="Movie Name" type="text" id="title_id">
+                    <input class="form-control" placeholder="Ratings" type="text" id="ratings_id">
+                    <button class="btn btn-primary" id="add_button">
+                            Add 
+                    </button>
+                    <button class="btn btn-success" id="update_btn">
+                        Update 
+                </button>
+                </div>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>#</td>
+                    
+                    <td>Title</td>
+                    <td>Ratings</td>
+                    <td>Actions</td>
+                </tr>
+    
+            </thead>
+            <tbody id="data_table">
+                
+            </tbody>
+
+        </table>
+    </div>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<script>
+    let data_array = [];
+
+        let update_id ;
+        $("#update_btn").click(function()
+        {
+            if(editable==true)
+            {
+                let obj = {name:  $("#title_id").val(),ratings:  $("#ratings_id").val() };
+                data_array[update_id] = obj;
+                display();
+            }
+            editable = false;
+        }
+        );
+        $("#add_button").click(function()
+        {
+            
+            editable = false;
+            console.log($("#ratings_id").val() + "" + $("#title_id").val());
+            if(isNaN($("#ratings_id").val()))
+            {
+                alert('Please Enter Number please ')
+
+            }
+            else  if($("#ratings_id").val()!="" && $("#title_id").val()!="")            
+            {
+                let obj = {name:  $("#title_id").val(),ratings:  $("#ratings_id").val() }; 
+                data_array.push(obj);
+                display();
+            }
+            else
+            {
+                alert("please enter full data");
+            }
+                    });
+        function delete_item(id)
+        {
+            data_array.splice(id,1);
+            $("#"+id).remove();
+            display();
+
+        }
+        function display() 
+        {
+            let data = "";
+            let data_1 =  $("#data_table");
+            data_array.forEach( (value,index) =>{
+
+                data+= `
+                
+    <tr id="${index}">
+        <td>${index+1}</td>
+        
+        <td>${value.name}</td>
+        <td>${value.ratings}</td>
+        <td> <button onclick="edit_item('${index}','${value.ratings}','${value.name}' )" class="btn btn-warning">Edit</button> <button onclick='delete_item(${index})' class="btn btn-danger">Delete</button>  </td>
+    </tr>
+                `;  
+            } );
+            data_1.html(data);
+
+            editable = false;
+               
+        }
+        let editable = false;
+        function edit_item(id, ratings,movie)
+        {
+            $("#ratings_id").val(ratings);
+            $("#title_id").val(movie);
+            editable = true;
+            update_id = id;
+        }
+        
+    
+
+</script>
+</html>
