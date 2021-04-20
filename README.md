@@ -13,4 +13,7 @@
 ### [To Do with Local Sotage](https://haseebullahabbasi.github.io/semester_web/lab_6/dot_9.html)
 
 ### [JQuery Effects_1](https://haseebullahabbasi.github.io/semester_web/jquery_prc/index.html)
-### [JQuery Effects_1](https://haseebullahabbasi.github.io/semester_web/jquery_prc/effects/index.html)
+
+### [JQuery Effects_2](https://haseebullahabbasi.github.io/semester_web/jquery_prc/effects/index.html)
+
+### [Week 8 display Movie Task ](https://haseebullahabbasi.github.io/semester_web/week_8/index.html)
