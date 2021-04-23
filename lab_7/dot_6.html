@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <style>
+        .col-md-4
+        {
+            display: inline;
+        }
+        .form-control
+        {
+
+            /* 
+            data_array.sort(function (x, y) {
+    return x.ratings - y.ratings;
+});
+
+
+       data_array.sort(function (x, y) {
+    return  x.name == y.name ? 0 : x.name > y.name ? 1 : -1;
+});
+ */
+            display: inline;
+            width:80%;
+        }
+
+    </style>
+</head>
+<div class="container">
+    <div class="container text-center">
+        <h1 class="display-1"> Dot Favt Dramas</h1>
+        <div class="row">
+           <div class="col-md-4">
+            <label  for="title">
+                Title
+            </label>
+            <input placeholder="Drama Title" class="form-control" type="text" id="title_id">
+            
+           </div>
+           <div class="col-md-4">
+            <label  for="ratings">
+                ratings
+            </label>
+            <input placeholder="Ratings" class="form-control" type="text"  id="ratings">
+            
+           </div>
+           <button  id="add_button" class="form-control" style="width: 30%;"> Add Drama</button>
+        </div>
+    </div>
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>#</td>
+                    
+                    <td style="width: 40%; text-align: center;"> <button class="btn" id="title_btn">  Title </button></td>
+                    <td style="width: 20%; text-align : center "> <button class="btn" id="ratings_btn">  Ratings </button></td>
+                    <td style="text-align: center;">Actions</td>
+                </tr>
+    
+            </thead>
+            <tbody id="data_table">
+                
+            </tbody>
+
+        </table>
+    </div>
+</div>
+<body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-
+    16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script src="dot_6.js"></script>
+
+</body>
+</html>
