@@ -22,6 +22,11 @@ $(document).ready(function ()
                 alert("please enter full data");
             }
     });
+    $('#ratings_btn').click(ratings_sort);
+
+    $('#title_btn').click(name_sort);
+
+
 });
 function display()
 {
@@ -55,9 +60,6 @@ function delete_item(id)
 let n_sort = 1;
 let r_sort = 1;
 
-$('#ratings_btn').click(ratings_sort());
-
-$('#title_btn').click(name_sort());
 
  function ratings_sort() { 
     if(r_sort%2==1)
