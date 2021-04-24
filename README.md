@@ -17,3 +17,9 @@
 ### [JQuery Effects_2](https://haseebullahabbasi.github.io/semester_web/jquery_prc/effects/index.html)
 
 ### [Week 8 display Movie Task ](https://haseebullahabbasi.github.io/semester_web/week_8/index.html)
+
+### [Lab 7 ](https://haseebullahabbasi.github.io/semester_web/lab_7/index.html)
+
+### [Lab 7: Drama Ratings ](https://haseebullahabbasi.github.io/semester_web/lab_7/dot_6.html)
+
+### [Lab 7: Ryon Animated  ](https://haseebullahabbasi.github.io/semester_web/lab_7/dot_8.html)
