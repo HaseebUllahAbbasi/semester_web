@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Please click on the checkbox control.</p>
+
+<form>
+  <label for="id-checkbox">Checkbox:</label>
+  <input type="checkbox" id="id-checkbox"/>
+</form>
+
+<div id="output-box"></div>
+
+<script>
+document.querySelector("#id-checkbox").addEventListener("click", function(event) {
+         document.getElementById("output-box").innerHTML += "Sorry! <code>preventDefault()</code> won't let you check this!<br>";
+         event.preventDefault();
+}, false); // works for both trye and false 
+</script>
+
+</body>
+
+</html>
