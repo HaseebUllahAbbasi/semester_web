@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dot_4</title>
+</head>
+<body>
+
+    
+    <script>
+        function delay(miliseconds) {
+            // setTimeout(ms);
+            return new Promise(resolve => setTimeout(resolve, miliseconds));
+        }
+        delay(3000).then(() => alert('runs after 3 seconds'));
+    </script>
+</body>
+</html>
