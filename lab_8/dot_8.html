@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <style>
+        img{
+            margin: 1rem;
+        }
+    </style>
+    <title>DOT_8</title>
+  </head>
+
+  <body>
+      <div class="container-fluid my-2">
+        <div class="container">
+            <div class="row my-3">
+                <input type="text" name="" placeholder="Enter Word" class="form-control" id="keyword">
+            </div>
+            <div class="row">
+                <div class="col-md-6  my-1">
+                    <button class="btn btn-success form-control" id="add_button"> Enter </button>
+                </div>
+                <div class="container col-md-6">
+                    <button class=" my-1 btn btn-danger  form-control" id="remove_btn"> Enter </button>        
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="d-flex align-content-end flex-wrap" id= "">
+            <div class="container" id="area">
+            </div>
+        </div>
+      </div>
+    
+  </body>
+  
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous">
+
+</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $("#add_button").click(async function()
+        {
+            
+            let key_word =  $("#keyword").val();
+            // console.log(key_word);
+            // if(key_word!="")
+            // {
+                 const data = await fetch(`https://api.giphy.com/v1/gifs/search?q=${key_word}&api_key=dc6zaTOxFJmzC`);
+                 let json_data = await data.json();
+                 console.log(json_data);
+                 let img_src = `${json_data.data[0].url}`
+
+                 let $new_img = `<img src="https://i.giphy.com/media/H6bfaRHZ2MIfVfkNNx/giphy.webp" alt="">`;
+                 let  $img =    `<img src='${img_src}';" alt="">`;
+
+                $('#area').append($new_img,$img);
+
+                // }
+
+        });
+    </script>
+  
+  </html>
