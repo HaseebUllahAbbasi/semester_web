@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+    
+    function inOrder(fun_1,fun_2)
+   {
+       Promise.resolve(fun_1()).then(fun_1())
+   }
+
+   var logOne = setTimeout(function() {
+    console.log("one!");
+   }, Math.random() * 1000);
+   var logTwo = setTimeout(function() {
+    console.log("two!");
+   }, Math.random() * 1000);
+   inOrder(logOne, logTwo);
+
+
+    </script>
+</body>
+</html>

@@ -3,7 +3,6 @@ $(document).ready(function ()
 {
     $("#add_button").click(function()
         {
-            
             editable = false;
             console.log($("#ratings").val() + "" + $("#title_id").val());
             if(isNaN($("#ratings").val()) || $("#ratings").val() >10  || $("#ratings").val() < 0 )
