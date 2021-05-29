@@ -3,9 +3,6 @@ import { useState } from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 
-const list = [1, 2, 3];
-
-
 function App() {
   const [data,setData] = useState("")
   const [json,setJson] = useState();
@@ -27,7 +24,7 @@ function App() {
     console.log(data + " is searched" );
     
      
-    if(json!=undefined)
+    if(json!==undefined)
     {
       const rand_index = Math.floor(Math.random() * json.data.length);
       console.log( json.data[rand_index].images.original.url);
@@ -41,7 +38,7 @@ function App() {
         return [...prevImages, newItem]
       })
     }
-    
+      
     //setCurrentItem('')
     //console.log(json);
   }
@@ -64,12 +61,10 @@ function App() {
     <div className="row" id="images">
       {images.map( (source,key)  =>
       {
-
         console.log(source);
         //console.log(source.toString()+ " "+ key);
         return <div key={source.id}>
-        <img src={source.src}></img>
-        
+        <img src={source.src} alt="NO Source Found"></img>
       </div>
       } 
         
