@@ -2,13 +2,11 @@
 import './App.css';
 import EightBall from './EightBall';
 
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import EightBall_1 from './EightBall_1';
 
 function App() {
 
-  const reset_data = ()=>
-  {
-    // soon will be added 
-  }
   const data_1 = [
     { msg: "It is certain.", color: "green" },
     { msg: "It is decidedly so.", color: "green" },
@@ -31,6 +29,7 @@ function App() {
     { msg: "Outlook not so good.", color: "red" },
     { msg: "Very doubtful.", color: "red" },
   ]
+  /*
   return (
     <div className="App">
       <div className="container">
@@ -41,23 +40,103 @@ function App() {
       </div>
     </div>
   );
-  
+  */
 
-
-  /*
   return (
     <div className="App">
       <div className="container">
         <div className="text-center">
-
           <EightBall answers={data_1} />
-          
+
         </div>
+        <div className="row">
+          <div className="col-md-3">
+            <EightBall_1 obj={data_1[Math.floor(Math.random() * data_1.length)]} answers={data_1} />
+
+          </div>
+          <div className="col-md-3">
+
+            <EightBall_1 obj={data_1[Math.floor(Math.random() * data_1.length)]} answers={data_1} />
+
+          </div>
+          <div className="col-md-3">
+            <EightBall_1 obj={data_1[Math.floor(Math.random() * data_1.length)]} answers={data_1} />
+
+          </div>
+          <div className="col-md-3">
+            <EightBall_1 obj={data_1[Math.floor(Math.random() * data_1.length)]} answers={data_1} />
+
+          </div>
+
+
+        </div>
+        <div className="row">
+          <div className="col-md-3">
+            <EightBall_1 obj={data_1[Math.floor(Math.random() * data_1.length)]} answers={data_1} />
+          </div>
+          <div className="col-md-3">
+
+            <EightBall_1 obj={data_1[Math.floor(Math.random() * data_1.length)]} answers={data_1} />
+
+          </div>
+          <div className="col-md-3">
+            <EightBall_1 obj={data_1[Math.floor(Math.random() * data_1.length)]} answers={data_1} />
+
+          </div>
+          <div className="col-md-3">
+            <EightBall_1 obj={data_1[Math.floor(Math.random() * data_1.length)]} answers={data_1} />
+
+          </div>
+
+
+        </div>
+        <div className="row">
+          <div className="col-md-3">
+            <EightBall_1 obj={data_1[Math.floor(Math.random() * data_1.length)]} answers={data_1} />
+
+          </div>
+          <div className="col-md-3">
+
+            <EightBall_1 obj={data_1[Math.floor(Math.random() * data_1.length)]} answers={data_1} />
+
+          </div>
+          <div className="col-md-3">
+            <EightBall_1 obj={data_1[Math.floor(Math.random() * data_1.length)]} answers={data_1} />
+
+          </div>
+          <div className="col-md-3">
+            <EightBall_1 obj={data_1[Math.floor(Math.random() * data_1.length)]} answers={data_1} />
+
+          </div>
+          <div className="row">
+            <div className="col-md-3">
+              <EightBall_1 obj={data_1[Math.floor(Math.random() * data_1.length)]} answers={data_1} />
+
+            </div>
+            <div className="col-md-3">
+
+              <EightBall_1 obj={data_1[Math.floor(Math.random() * data_1.length)]} answers={data_1} />
+
+            </div>
+            <div className="col-md-3">
+              <EightBall_1 obj={data_1[Math.floor(Math.random() * data_1.length)]} answers={data_1} />
+
+            </div>
+            <div className="col-md-3">
+              <EightBall_1 obj={data_1[Math.floor(Math.random() * data_1.length)]} answers={data_1} />
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+
       </div>
     </div>
   );
-    */
-  
 }
 
 export default App;
