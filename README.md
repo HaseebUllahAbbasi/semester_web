@@ -23,3 +23,6 @@
 ### [Lab 7: Drama Ratings ](https://haseebullahabbasi.github.io/semester_web/lab_7/dot_6.html)
 
 ### [Lab 7: Ryon Animated  ](https://haseebullahabbasi.github.io/semester_web/lab_7/dot_8.html)
+
+### [Lab 8: Gif App  ](https://haseebullahabbasi.github.io/semester_web/lab_7/task_8/dot.html)
+
