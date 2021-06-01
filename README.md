@@ -2,6 +2,9 @@
 
 ## Links 
 
+## Quran (JSON) [Read Quran by Clicking Here](https://haseebullahabbasi.github.io/Quran_Json/index/index.html)
+
+
 ### [Simple_crud](https://haseebullahabbasi.github.io/semester_web/simple_crud/index4.html)
 
 ### [Lab_5](https://haseebullahabbasi.github.io/semester_web/lab_5)
@@ -24,5 +27,5 @@
 
 ### [Lab 7: Ryon Animated  ](https://haseebullahabbasi.github.io/semester_web/lab_7/dot_8.html)
 
-### [Lab 8: Gif App  ](https://haseebullahabbasi.github.io/semester_web/lab_7/task_8/dot.html)
+### [Lab 8: Gif App  ](https://haseebullahabbasi.github.io/semester_web/lab_8/task_8/dot.html)
 
