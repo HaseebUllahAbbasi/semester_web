@@ -13,7 +13,7 @@ con.connect(function(err) {
     console.log("Connected!");
 
 
-    
+        
     // inserting the customer in the customer table 
     var sql = "INSERT INTO customers (name, address) VALUES ('Company Inc', 'Highway 37')";
 
