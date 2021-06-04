@@ -42,6 +42,11 @@ function App() {
     //setCurrentItem('')
     //console.log(json);
   }
+  const  remove_pics =()=>
+  {
+    setImages([])
+
+  }
   return (
     <div className="App">
       <div className="container">
@@ -56,7 +61,7 @@ function App() {
       {/* <input  className="btn btn-primary" onClick={search_gif} onSubmit={search_gif} value="Search Gif" /> */}
       <button  id="add_buttons" onClick={add_gif} className="btn btn-secondary">Search Gif</button>
       
-      <button  id="remove_button" className="btn btn-danger ml-2">Remove Images</button>
+      <button  id="remove_button"  onClick={remove_pics} className="btn btn-danger ml-2">Remove Images</button>
     </div>
     <div className="row" id="images">
       {images.map( (source,key)  =>
