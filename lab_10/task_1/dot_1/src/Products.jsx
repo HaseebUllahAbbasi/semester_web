@@ -5,7 +5,12 @@ const Products = (props) => {
 
     return (
         <div>
-            <h1 className="display-2">Products</h1>
+            <div className="row">
+                <div className="col-md-3 display-2"> Products  </div>
+                {/* <div className="col-md-5 offset-md-2 display-6"> Products Added : {props.count}</div> */}
+                
+            </div>
+            
             <div className="row">
                 {
                     props.mock_data.map(prdocut => <Product key={prdocut.id} id={prdocut.id } onAdd={props.onAdd}  name={prdocut.name} price={prdocut.price} ></Product>)

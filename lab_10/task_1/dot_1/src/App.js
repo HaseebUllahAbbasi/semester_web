@@ -10,8 +10,9 @@ import Home from './Home';
 import Product from './Product';
 import { useState } from 'react';
 import ShoppingCart from './ShoppingCart';
- 
+  
 function App() {
+  const [count,setCount] = useState(0)
   const [sum,setSum]  = useState(0);
   const mock_data = [{ "id": 1, "name": "Tea Leaves - Oolong", "price": "$66.59", "qty": 13 },
   { "id": 2, "name": "Beans - Fava Fresh", "price": "$1.93", "qty": 12 },
@@ -68,48 +69,65 @@ function App() {
   {
     let sum_data = 0
     for(let data in cart)
-    {;
-      sum_data+=(cart[data].amount *cart[data].amount);
+    {
+
+      let price =  parseInt(cart[data].amount.split('$')[1])
+      let qty = parseInt(cart[data].qty)
+     sum_data+=( price*qty);
     }
+    // console.log(cart[0].amount.split('$')[1])
     setSum(sum_data)
     alert("the total bill is "+ sum)
   }
 
+  const set_count = ()=>
+  {
+    let all_count = 0
+    for(let data in cart)
+    {
+      all_count+=cart[data].qty
+      console.log(cart[data].qty);
+    }
+
+    setCount(all_count)
+  }
   const [cart,setCart] = useState([])
   const increment =(product)=> 
   {
     console.log("in increment");
     setCart(
       cart.map( (x)=> x.id == product.id ? {...product, qty: x.qty+1}: x ))
+      set_count()
   }
   const onRemove = (product)=>
   {
     setCart(cart.filter((x)=> x.id !==  product.id))
+    set_count()
   }
   const decrement =(product)=> 
   {
 
-    
-    console.log("in dec");
-    console.log(product);
-    console.log(cart);
     setCart( cart.map((x)=> x.id == product.id ?  (   (x.qty>1) ? {...product,qty: x.qty-1} : x) : x  ))
-    
+    set_count()
   }
   
   const onAdd = (product)=> 
   {
-    
+ 
     const exist = cart.find((x)=> x.id === product.id);
     if(exist)
     {
       // console.log("in true");
       setCart(
-        cart.map( (x)=> x.id === product.id ? {...product, qty: x.qty+1}: x )) 
+        cart.map( (x)=> x.id === product.id ? {...product, qty: x.qty+1}: x ))
+ 
     }
      
      else
       setCart([...cart,{...product,qty:1}])
+      
+      set_count()
+
       // alert('product added')
     }
   return (
@@ -166,7 +184,7 @@ function App() {
           <Home></Home>
         </Route>
         <Route path="/products">
-          <Products mock_data={mock_data} onAdd={onAdd} ></Products>
+          <Products mock_data={mock_data} count={count} onAdd={onAdd} ></Products>
         </Route>
         <Route path="/cart">
           {/* <ShopingCart></ShopingCart> */}
