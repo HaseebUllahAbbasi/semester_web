@@ -99,20 +99,45 @@ function App() {
   const [cart,setCart] = useState([])
   const increment =(product)=> 
   {
-    console.log("in increment");
-    setCart(
-      cart.map( (x)=> x.id == product.id ? {...product, qty: x.qty+1}: x ))
-      set_count()
+    // console.log("in increment");
+    // setCart(
+    //   cart.map( (x)=> x.id == product.id ? {...product, qty: x.qty+1}: x ))
+    //   set_count()
+    const check_avail = 
+    mock_data.findIndex((x) => x.id===product.id)
+    if(mock_data[check_avail].qty>0)
+    {
+        setCart(
+        cart.map( (x)=> x.id === product.id ? {...product, qty: x.qty+1}: x ))
+        setMock_Data(mock_data.map((x)=> x.id === product.id ?   ((x.qty>0) ?  {...x,qty: x.qty-1} : x)   :x) )     
+  }
+  else
+  {
+    alert('no more your desired product')
+  }
+
   }
   const onRemove = (product)=>
   {
+    const index_of_del_item = 
+     cart.findIndex((x) => x.id===product.id)
+    setMock_Data(mock_data.map( (x)=> product.id === x.id ? {...x, qty :x.qty+cart[index_of_del_item].qty }:x  ))
     setCart(cart.filter((x)=> x.id !==  product.id))
     set_count()
   }
   const decrement =(product)=> 
   {
-
-    setCart( cart.map((x)=> x.id == product.id ?  (   (x.qty>1) ? {...product,qty: x.qty-1} : x) : x  ))
+    const index_of_del_item = 
+    cart.findIndex((x) => x.id===product.id)
+    if(cart[index_of_del_item].qty>1)
+    {
+      setMock_Data(mock_data.map( (x)=> product.id === x.id ? {...x, qty :x.qty+1 }:x  ))
+      setCart( cart.map((x)=> x.id == product.id ?  (   (x.qty>1) ? {...product,qty: x.qty-1} : x) : x  ))
+    }
+    else
+    {
+      onRemove(product);
+    }
     set_count()
   }
   
@@ -122,7 +147,7 @@ function App() {
   } ,[])
   useEffect( ()=>
   {
-    console.log(mock_data);
+    // console.log(mock_data);
     set_count()
     calculated_method()
     // alert('cart effected')
@@ -131,16 +156,20 @@ function App() {
   const onAdd = (product)=> 
   {
  
-    console.log(product);
+    // console.log(product);
     const exist = cart.find((x)=> x.id === product.id);
-    // const check_avail = mock_data.findIndex(product)
-    if(exist)
+    const check_avail = 
+    mock_data.findIndex((x) => x.id===product.id)
+    // console.log(check_avail);
+    if(mock_data[check_avail].qty>0)
     {
-      // console.log("in true");
-      setCart(
+      if(exist)
+    {
+
+        setCart(
         cart.map( (x)=> x.id === product.id ? {...product, qty: x.qty+1}: x ))
-      setMock_Data(mock_data.map((x)=> x.id === product.id ?  {...x,qty: x.qty-1} :x) )  
- 
+        setMock_Data(mock_data.map((x)=> x.id === product.id ?   ((x.qty>0) ?  {...x,qty: x.qty-1} : x)   :x) )  
+        
     }
     // else if(check_avail)
     // {
@@ -150,11 +179,18 @@ function App() {
     else
         // alert('product is no more')
         setCart([...cart,{...product,qty:1}])
-           setMock_Data(mock_data.map((x)=> x.id === product.id ?  {...x,qty: x.qty-1} :x) )  
+           setMock_Data(mock_data.map((x)=> x.id === product.id ?   (   (x.qty>0) ? {...x,qty: x.qty-1} : x)   :x) )  
         
       
       set_count()
 
+
+    }
+    else
+    {
+      alert('no more you desired product')
+    }
+    
       // alert('product added')
     }
   return (
@@ -215,7 +251,7 @@ function App() {
         </Route>
         <Route path="/cart">
           {/* <ShopingCart></ShopingCart> */}
-          <ShoppingCart increment={increment}  onRemove = {onRemove} decrement={decrement} cart={cart}></ShoppingCart>
+          <ShoppingCart   increment={increment}  onRemove = {onRemove} decrement={decrement} cart={cart}></ShoppingCart>
           </Route>
         {/* <PrivateRoute path="/admin" component={Admin} /> */}
       </Switch>

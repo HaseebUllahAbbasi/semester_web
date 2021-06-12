@@ -11,7 +11,7 @@ function ShoppingCart(props) {
                 props.cart.length > 0 ? <div className="container"> <h1 className="display-2">Shopping Cart</h1>
                     <div className="row">
                         {
-                            props.cart.map(product => (<div className="col-sm-4">
+                            props.cart.map(product => (<div key={product.id} className="col-sm-4">
                                 <div className="card">
                                     <div className="card-body text-center">
                                         <h5 className="card-title">{product.name}</h5>
