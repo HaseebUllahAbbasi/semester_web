@@ -8,13 +8,14 @@ import Products from './Products';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import Home from './Home';
 import Product from './Product';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ShoppingCart from './ShoppingCart';
+import { prettyDOM } from '@testing-library/dom';
   
 function App() {
   const [count,setCount] = useState(0)
   const [sum,setSum]  = useState(0);
-  const mock_data = [{ "id": 1, "name": "Tea Leaves - Oolong", "price": "$66.59", "qty": 13 },
+  const [mock_data,setMock_Data] = useState( [{ "id": 1, "name": "Tea Leaves - Oolong", "price": "$66.59", "qty": 13 },
   { "id": 2, "name": "Beans - Fava Fresh", "price": "$1.93", "qty": 12 },
   { "id": 3, "name": "Asparagus - Green, Fresh", "price": "$57.96", "qty": 5 },
   { "id": 4, "name": "Truffle Cups - White Paper", "price": "$35.96", "qty": 13 },
@@ -63,9 +64,9 @@ function App() {
   { "id": 47, "name": "Sterno - Chafing Dish Fuel", "price": "$1.59", "qty": 17 },
   { "id": 48, "name": "Seedlings - Clamshell", "price": "$98.22", "qty": 10 },
   { "id": 49, "name": "Cinnamon Rolls", "price": "$78.47", "qty": 13 },
-  { "id": 50, "name": "Mint - Fresh", "price": "$72.53", "qty": 10 }];
+  { "id": 50, "name": "Mint - Fresh", "price": "$72.53", "qty": 10 }]);
 
-  const calculate = ()=>
+  const calculated_method = ()=>
   {
     let sum_data = 0
     for(let data in cart)
@@ -77,6 +78,10 @@ function App() {
     }
     // console.log(cart[0].amount.split('$')[1])
     setSum(sum_data)
+  }
+  const calculate = ()=>
+  {
+    
     alert("the total bill is "+ sum)
   }
 
@@ -86,7 +91,7 @@ function App() {
     for(let data in cart)
     {
       all_count+=cart[data].qty
-      console.log(cart[data].qty);
+     // console.log(cart[data].qty);
     }
 
     setCount(all_count)
@@ -111,20 +116,42 @@ function App() {
     set_count()
   }
   
+  useEffect( ()=>
+  {
+    // alert('cart init')
+  } ,[])
+  useEffect( ()=>
+  {
+    console.log(mock_data);
+    set_count()
+    calculated_method()
+    // alert('cart effected')
+  } ,[cart])
+  
   const onAdd = (product)=> 
   {
  
+    console.log(product);
     const exist = cart.find((x)=> x.id === product.id);
+    // const check_avail = mock_data.findIndex(product)
     if(exist)
     {
       // console.log("in true");
       setCart(
         cart.map( (x)=> x.id === product.id ? {...product, qty: x.qty+1}: x ))
+      setMock_Data(mock_data.map((x)=> x.id === product.id ?  {...x,qty: x.qty-1} :x) )  
  
     }
-     
-     else
-      setCart([...cart,{...product,qty:1}])
+    // else if(check_avail)
+    // {
+    //   setCart([...cart,{...product,qty:1}])
+    //   setMock_Data(mock_data.map((x)=> x.id === product.id ?  {...x,qty: x.qty-1} :x) )  
+    // }
+    else
+        // alert('product is no more')
+        setCart([...cart,{...product,qty:1}])
+           setMock_Data(mock_data.map((x)=> x.id === product.id ?  {...x,qty: x.qty-1} :x) )  
+        
       
       set_count()
 
