@@ -23,7 +23,7 @@ con.connect(function(err) {
     //  con.query("CREATE TABLE customers (name VARCHAR(255), address VARCHAR(255))", function (err, result) {
     
     
-    // creating database , but do not but the put the name of the database in the creaconnection method  
+    // creating database , but do not but the put the name of the database in the createConnection method  
     // con.query("CREATE DATABASE node_mysql", function (err, result) {
         
         if (err) throw err;

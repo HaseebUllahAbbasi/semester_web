@@ -167,7 +167,7 @@ function App() {
     {
 
         setCart(
-        cart.map( (x)=> x.id === product.id ? {...product, qty: x.qty+1}: x ))
+        cart.map( (x)=> x.id === product.id ?  {...product, qty: x.qty+1}: x ))
         setMock_Data(mock_data.map((x)=> x.id === product.id ?   ((x.qty>0) ?  {...x,qty: x.qty-1} : x)   :x) )  
         
     }
@@ -243,8 +243,7 @@ function App() {
       </nav>
 
       <Switch>
-        <Route exact path="/">
-          <Home></Home>
+        <Route exact path="/" component={Home} >
         </Route>
         <Route path="/products">
           <Products mock_data={mock_data} count={count} onAdd={onAdd} ></Products>

@@ -1,7 +1,9 @@
-<<<<<<< HEAD
-=======
 .component
 {
   margin: 1rem;
 }
->>>>>>> 1c921b0b944f1e2d5aa4b0100d35ea82bdb2bf09
+input[type=radio] 
+{
+  margin: 0.2rem;
+
+}

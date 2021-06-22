@@ -3,13 +3,6 @@ import pic from './Capture.png'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 import './App.css';
-<<<<<<< HEAD
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-function App() {
-  return (
-    <div className="App">
-      <p className="display-1 text-center">Dot is Here</p>
-=======
 
 const PizzaForm = ()=>
 {
@@ -106,6 +99,14 @@ const PizzaForm = ()=>
           <div className="col-md-1 ">Bill:00</div>
           </div>
       </div>
+
+      <div className="component">
+      <div className="row">
+          <div className="col-md-3">  <button className="btn  btn-success"> Add to Cart </button>   </div>
+          <div className="col-md-3 offset-md-6 "> <button className="btn  btn-warning"> Check Out </button> </div>
+          </div>
+
+      </div>
       
       
 
@@ -136,7 +137,6 @@ function App() {
       </div>
       
       </div>
->>>>>>> 1c921b0b944f1e2d5aa4b0100d35ea82bdb2bf09
     </div>
   );
 }

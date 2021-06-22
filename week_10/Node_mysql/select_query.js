@@ -43,6 +43,7 @@ con.connect(function(err) {
 
   //select the specific row that reuturns the object
   //console.log(result[2].address);
+  
     //can be used to display results
  con.query("SELECT name FROM customers", function (err, result, fields) {
 
