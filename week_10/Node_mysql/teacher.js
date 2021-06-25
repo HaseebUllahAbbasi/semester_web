@@ -15,20 +15,20 @@ const url = require('url')
 // }
 // const con = mysql.createConnection(conString)
 
-const server = http.createServer(function (req, res) {
-    let parsedUrl = url.parse(req.url, true)
+// const server = http.createServer(function (req, res) {
+//     let parsedUrl = url.parse(req.url, true)
 
-    if (req.url == '/getAllCustomers' && req.method == 'GET') {
-        console.log('entered')
-        con.query('SELECT * from employees LIMIT 10', function (err, rows, fields) {
-            if (err) throw err;
-            res.writeHead(200, { "Content-type": 'text/json' })
-            res.write(JSON.stringify(rows))
-            res.end()
-        })
-        return;
+//     if (req.url == '/getAllCustomers' && req.method == 'GET') {
+//         console.log('entered')
+//         con.query('SELECT * from employees LIMIT 10', function (err, rows, fields) {
+//             if (err) throw err;
+//             res.writeHead(200, { "Content-type": 'text/json' })
+//             res.write(JSON.stringify(rows))
+//             res.end()
+//         })
+//         return;
 
-    }
+//     }
 //     console.log(parsedUrl)
 
 //     if (parsedUrl.pathname == '/getCustomerById/' && req.method == 'GET') {

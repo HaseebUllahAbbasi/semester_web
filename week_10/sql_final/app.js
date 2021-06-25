@@ -1,5 +1,7 @@
 const Express = require('express')
+const http = require('http')
 const mysql = require('mysql')
+const { stringify } = require('querystring')
 const app = Express()
 const connectionString = {
     host: 'localhost',
@@ -7,9 +9,27 @@ const connectionString = {
     password: '',
     database: 'hr'
 }
+ const connection_obj = mysql.createConnection(connectionString)
+
+// const server =  http.createServer(function (req,res)
+// {
+//     if(req.url==="/ok")
+//     {
+//         const sql = "SELECT * FROM `employees`";
+//         connection_obj.query(sql,function(err,rows,fields){
+//             // res.writeHead(200, { "Content-type": 'text/json' })
+//             res.write(JSON.stringify(rows))
+//             res.end()
+
+//         })        
+//     }
+//     else
+//     res.end('404')
+// })
+
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
-const connection_obj = mysql.createConnection(connectionString)
+// const connection_obj = mysql.createConnection(connectionString)
 app.get('/', function (req, res) {
     res.send("Got it ")
 })
@@ -68,3 +88,6 @@ app.delete('/delete/:id',function(req,res){
 app.listen(4005, function () {
     console.log("on port 4005");
 })
+// server.listen(4005, function () {
+//         console.log("on port 4005");
+//     })

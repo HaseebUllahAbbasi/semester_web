@@ -9,7 +9,7 @@ const extend = (array1, array2) => {
  }  
 
  const removeKey = (obj, key) => {
-      ({ [key]: undefined, ...obj } = obj);
+     return ({ [key]: undefined, ...obj } = obj);
  }
  const combine = (obj1, obj2) => {
     return { ...obj1, ...obj2 };

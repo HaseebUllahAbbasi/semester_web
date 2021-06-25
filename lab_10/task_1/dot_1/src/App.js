@@ -1,6 +1,8 @@
 
 import './App.css';
 import { Link, Route, Switch } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { Button } from 'semantic-ui-react'
 import Products from './Products';
@@ -13,6 +15,8 @@ import ShoppingCart from './ShoppingCart';
 import { prettyDOM } from '@testing-library/dom';
   
 function App() {
+const notify = () => toast("Thanks For Shopping");
+
   const [count,setCount] = useState(0)
   const [sum,setSum]  = useState(0);
   const [mock_data,setMock_Data] = useState( [{ "id": 1, "name": "Tea Leaves - Oolong", "price": "$66.59", "qty": 13 },
@@ -151,11 +155,12 @@ function App() {
     set_count()
     calculated_method()
     // alert('cart effected')
-  } ,[cart])
+  } ,[mock_data])
   
   const onAdd = (product)=> 
   {
  
+
     // console.log(product);
     const exist = cart.find((x)=> x.id === product.id);
     const check_avail = 
@@ -194,7 +199,10 @@ function App() {
       // alert('product added')
     }
   return (
+    
     <div className="App">
+        <ToastContainer />
+
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
   <a className="navbar-brand" >Dot</a>
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -218,7 +226,7 @@ function App() {
       
     </ul>
     <div className="form-inline ">
-    <button className="btn btn-outline-success my-2 my-sm-0" onClick={calculate} >Check Out</button>
+    <button className="btn btn-outline-success my-2 my-sm-0" onClick={()=>{ calculate(); notify(); }}  >Check Out</button>
 
     </div>
   </div>
