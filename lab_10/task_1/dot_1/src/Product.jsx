@@ -6,7 +6,6 @@ import React from 'react'
 function Product (props)
 {
     return (
-
             <div className="col-sm-4">
                 <div className="card">
                 <div className="card-body text-center">

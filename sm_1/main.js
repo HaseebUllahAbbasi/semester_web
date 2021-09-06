@@ -3193,21 +3193,117 @@ const results = [
         "nat": "CA"
     }
 ];
-document.getElementById("one").addEventListener("click", first);
-function first ()
-{
-    const array = results.splice(0,10);
-    // document.getElementById('1').children[2].innerHTML =  array[0].name.title + array[0].name.first + array[0].name.last  
-    for(let i in array)
-    {
-        document.getElementById(''+i).children[2].innerHTML = array[i].name.title + array[i].name.first + array[i].name.last ;
+
+document.getElementById("next").addEventListener("click", clicked);
+document.getElementById("prev").addEventListener("click", prev);
+document.getElementById('one').addEventListener('click', general);
+document.getElementById('two').addEventListener('click', general);
+document.getElementById('three').addEventListener('click', general);
+
+function general(e) {
+    console.log(e.target.innerHTML);
+    const value = e.target.innerHTML;
+    let initial = (value - 1) * 10;
+    let final = (value * 10) - 2;
+    j = 0;
+    while (j < 10) {
+        if (i < 57) {
+            document.getElementById('' + j).children[0].innerHTML = i;
+            document.getElementById('' + j).children[1].innerHTML = `<img src=${results[i].picture.thumbnail}> `;
+            document.getElementById('' + j).children[2].innerHTML = results[i].name.title + results[i].name.first + results[i].name.last;
+            document.getElementById('' + j).children[3].innerHTML = results[i].gender;
+            document.getElementById('' + j).children[4].innerHTML = results[i].email;
+            document.getElementById('' + j).children[5].innerHTML = results[i].phone;
+
+            document.getElementById('' + j).children[6].innerHTML = results[i].location.city;
+            document.getElementById('' + j).children[7].innerHTML = results[i].location.country;
+
+            i++;
+        }
+        else {
+            document.getElementById('' + j).children[1].innerHTML = ``;
+            document.getElementById('' + j).children[0].innerHTML = "";
+            document.getElementById('' + j).children[2].innerHTML = "";
+            document.getElementById('' + j).children[3].innerHTML = "";
+            document.getElementById('' + j).children[4].innerHTML = "";
+            document.getElementById('' + j).children[5].innerHTML = "";
+            document.getElementById('' + j).children[6].innerHTML = "";
+            document.getElementById('' + j).children[7].innerHTML = "";
+
+        }
+        j++
     }
 }
+
+let i = 0;
+function clicked() {
+    let j = 0;
+    while (j < 10) {
+        if (i < 57) {
+            document.getElementById('' + j).children[0].innerHTML = i;
+            document.getElementById('' + j).children[1].innerHTML = `<img src=${results[i].picture.thumbnail}> `;
+            document.getElementById('' + j).children[2].innerHTML = results[i].name.title + results[i].name.first + results[i].name.last;
+            document.getElementById('' + j).children[3].innerHTML = results[i].gender;
+            document.getElementById('' + j).children[4].innerHTML = results[i].email;
+            document.getElementById('' + j).children[5].innerHTML = results[i].phone;
+
+            document.getElementById('' + j).children[6].innerHTML = results[i].location.city;
+            document.getElementById('' + j).children[7].innerHTML = results[i].location.country;
+
+            i++;
+        }
+        else {
+            document.getElementById('' + j).children[1].innerHTML = ``;
+            document.getElementById('' + j).children[0].innerHTML = "";
+            document.getElementById('' + j).children[2].innerHTML = "";
+            document.getElementById('' + j).children[3].innerHTML = "";
+            document.getElementById('' + j).children[4].innerHTML = "";
+            document.getElementById('' + j).children[5].innerHTML = "";
+            document.getElementById('' + j).children[6].innerHTML = "";
+            document.getElementById('' + j).children[7].innerHTML = "";
+
+        }
+        j++;
+
+    }
+}
+
+function prev() {
+    let j = 0;
+    while (j < 10) {
+        if (i < 57 && i > 0) {
+            document.getElementById('' + j).children[0].innerHTML = i;
+            document.getElementById('' + j).children[1].innerHTML = `<img src=${results[i].picture.thumbnail}> `;
+            document.getElementById('' + j).children[2].innerHTML = results[i].name.title + results[i].name.first + results[i].name.last;
+            document.getElementById('' + j).children[3].innerHTML = results[i].gender;
+            document.getElementById('' + j).children[4].innerHTML = results[i].email;
+            document.getElementById('' + j).children[5].innerHTML = results[i].phone;
+            document.getElementById('' + j).children[6].innerHTML = results[i].location.city;
+            document.getElementById('' + j).children[7].innerHTML = results[i].location.country;
+
+            i--;
+        }
+        else {
+            document.getElementById('' + j).children[1].innerHTML = ``;
+            document.getElementById('' + j).children[0].innerHTML = "";
+            document.getElementById('' + j).children[2].innerHTML = "";
+            document.getElementById('' + j).children[3].innerHTML = "";
+            document.getElementById('' + j).children[4].innerHTML = "";
+            document.getElementById('' + j).children[5].innerHTML = "";
+            document.getElementById('' + j).children[6].innerHTML = "";
+            document.getElementById('' + j).children[7].innerHTML = "";
+
+        }
+        j++;
+
+    }
+}
+
 
 
 /*
     document.getElementById('1').children[1].innerHTML = avatar;
     document.getElementById('1').children[2].innerHTML = name;
-    
+
 
     */

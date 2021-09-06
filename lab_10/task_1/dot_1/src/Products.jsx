@@ -13,7 +13,7 @@ const Products = (props) => {
             
             <div className="row">
                 {
-                    props.mock_data.map(prdocut => <Product key={prdocut.id} id={prdocut.id } onAdd={props.onAdd}  name={prdocut.name} price={prdocut.price} quantity={prdocut.qty} ></Product>)
+                    props.mock_data.map(prdocut => <Product  key={prdocut.id} id={prdocut.id } onAdd={props.onAdd}  name={prdocut.name} price={prdocut.price} quantity={prdocut.qty} ></Product>)
                     
                     // props.mock_data.map(prdocut => <Product key={prdocut.id} product_item={prdocut} ></Product>   )
                 }
