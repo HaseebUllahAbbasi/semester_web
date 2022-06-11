@@ -21,6 +21,7 @@ app.get('/', (req, res) => {
     {
         con.query("select * from std",(err,row,fields)=>
         {
+            
             res.json(row)
         })
     }

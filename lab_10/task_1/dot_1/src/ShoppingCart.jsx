@@ -1,6 +1,5 @@
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import React from 'react'
-import { Card } from 'semantic-ui-react';
 
 function ShoppingCart(props) {
 

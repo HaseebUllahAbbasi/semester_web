@@ -8,7 +8,6 @@ const Products = (props) => {
             <div className="row">
                 <div className="col-md-3 display-2"> Products  </div>
                 <div className="col-md-5 offset-md-2 display-6"> Products Added : {props.count}</div>
-                
             </div>
             
             <div className="row">
